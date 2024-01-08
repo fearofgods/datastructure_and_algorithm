@@ -1,6 +1,6 @@
 ﻿namespace LinkedList
 {
-    internal class MyLinkedList
+    internal sealed class MyLinkedList
     {
         private MyNode? Head;
         private int Size = 0;
@@ -53,8 +53,21 @@
             return;
         }
 
+        public void RemoveAll()
+        {
+            if (Head == null) return;
+
+            Head = null;
+            Size = 0;
+        }
+
         public void Traverse()
         {
+            if (Size == 0)
+            {
+                Console.WriteLine("List Empty!");
+            }
+
             MyNode? temp = Head;
             while(temp != null)
             {

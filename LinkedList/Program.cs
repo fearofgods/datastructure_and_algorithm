@@ -1,6 +1,6 @@
 ﻿namespace LinkedList
 {
-    internal class Program
+    internal static class Program
     {
         static void Main(string[] args)
         {
@@ -12,6 +12,7 @@
             myLinkedList.AddToTail(4);
             myLinkedList.AddToTail(5);
             myLinkedList.RemoveFromHead();
+            myLinkedList.RemoveAll();
 
             myLinkedList.Traverse();
             Console.WriteLine("List Size::"+myLinkedList.GetSize());

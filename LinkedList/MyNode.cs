@@ -1,6 +1,6 @@
 ﻿namespace LinkedList
 {
-    internal class MyNode
+    internal sealed class MyNode
     {
         public int Data;
         public MyNode? PrevNode, NextNode;
