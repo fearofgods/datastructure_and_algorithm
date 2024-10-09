@@ -86,4 +86,9 @@ public class DoublelyLinkedList<T> : ILinkedList<T>
     {
         throw new NotImplementedException();
     }
+
+    public void Reverse()
+    {
+        throw new NotImplementedException();
+    }
 }

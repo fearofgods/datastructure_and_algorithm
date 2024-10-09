@@ -13,4 +13,5 @@ public interface ILinkedList<T>
     public void Traverse();
     public void RemoveAt(int index);
     public int IndexOf(T? value);
+    public void Reverse();
 }

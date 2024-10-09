@@ -189,4 +189,60 @@ public class SinglyLinkedListUT
         Assert.False(list.Contains(6));
         Assert.False(list.Contains(0));
     }
+
+    [Fact]
+    public void PeakFirst_ShouldBeReturnFirstValue()
+    {
+        SinglyLinkedList<int> list = new SinglyLinkedList<int>();
+        list.AddFirst(1);
+        list.AddFirst(2);
+        list.AddFirst(3);
+        list.AddFirst(4);
+        list.AddFirst(5);
+
+        Assert.Equal(5, list.PeakFirst());
+    }
+
+    [Fact]
+    public void PeakFirst_ShouldBeThrowException()
+    {
+        SinglyLinkedList<int> list = new SinglyLinkedList<int>();
+        Assert.Throws<Exception>(() => list.PeakFirst());
+    }
+
+    [Fact]
+    public void PeakLast_ShouldBeReturnLastValue()
+    {
+        SinglyLinkedList<int> list = new SinglyLinkedList<int>();
+        list.AddFirst(1);
+        list.AddFirst(2);
+        list.AddFirst(3);
+        list.AddFirst(4);
+        list.AddFirst(5);
+
+        Assert.Equal(1, list.PeakLast());
+    }
+
+    [Fact]
+    public void PeakLast_ShouldBeThrowException()
+    {
+        SinglyLinkedList<int> list = new SinglyLinkedList<int>();
+        Assert.Throws<Exception>(() => list.PeakLast());
+    }
+
+    [Fact]
+    public void Reverse_ShouldBeReturnTrue()
+    {
+        SinglyLinkedList<int> list = new SinglyLinkedList<int>();
+        list.AddFirst(1);
+        list.AddFirst(2);
+        list.AddFirst(3);
+        list.AddFirst(4);
+        list.AddFirst(5);
+
+        list.Reverse();
+
+        Assert.Equal(1, list.Head!.Value);
+        Assert.Equal(5, list.Tail!.Value);
+    }
 }

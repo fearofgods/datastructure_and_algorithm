@@ -19,11 +19,12 @@ internal class Program
         singlyLinkedList.AddFirst(4);
         singlyLinkedList.AddFirst(5);
 
-        singlyLinkedList.RemoveAt(2);
-        singlyLinkedList.RemoveAt(3);
+        //singlyLinkedList.RemoveAt(2);
+        //singlyLinkedList.RemoveAt(3);
 
 
         Console.WriteLine("Count::"+singlyLinkedList.Count);
+        singlyLinkedList.Reverse();
         singlyLinkedList.Traverse();
     }
 

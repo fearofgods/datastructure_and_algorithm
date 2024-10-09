@@ -254,4 +254,38 @@ public class SinglyLinkedList<T> : ILinkedList<T>
     {
         return IndexOf(value) != -1;
     }
+
+    public void Reverse()
+    {
+        if (IsEmpty) throw new Exception("List is empty! Nothing to reverse!");
+
+        if (Head == null)
+        {
+            return;
+        }
+        Node<T>? current = Head;
+        Node<T>? previous = null;
+        Node<T>? next = null;
+
+        //5->4->3->2->1
+        //next=2, current=1, previous=null
+        //current.next=previous=null, previous=current=1, current=next=2
+
+        //1->2->3->4->5
+        Tail = current;
+        while (current != null)
+        {
+            next = current.Next;
+            current.Next = previous;
+            previous = current;
+            current = next;
+        }
+
+        Head = previous;
+    }
+
+    public void Sort()
+    {
+
+    }
 }
